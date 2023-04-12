@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: pink;
-  padding: 160px 40px;
 `;
 
 export const ProjectList = styled.div`

@@ -4,16 +4,16 @@ import Hero from "./components/Hero";
 
 //fetching projects API and place in projects array
 const App = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]); // <-- array
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("http://localhost:1337/api/projects");
-      const projects = await response.json();
-      setProjects(projects);
-    };
-    fetchData();
+    // GET request using fetch inside useEffect React hook
+    fetch("http://localhost:1337/api/projects?populate=*")
+      .then((response) => response.json())
+      .then(({ data }) => setProjects(data)); // <-- save the data array
   }, []);
+
+  console.log(projects);
 
   return (
     <>

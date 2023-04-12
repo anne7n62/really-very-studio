@@ -5,12 +5,12 @@ export const BG = styled.section`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: absolute;
+  position: relative;
 
   height: 100vh;
   width: 100vw;
 
-  &&:after {
+  /* &&:after {
     animation: grain 12s steps(10) infinite;
     background-image: url("grain.jpeg");
     content: "";
@@ -55,5 +55,5 @@ export const BG = styled.section`
     90% {
       transform: translate(-10%, 10%);
     }
-  }
+  } */
 `;

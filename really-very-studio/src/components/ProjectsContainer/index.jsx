@@ -2,11 +2,18 @@ import React from "react";
 import { Container, ProjectList } from "./styles";
 import Project from "../Project";
 
-const ProjectsContainer = () => {
+const ProjectsContainer = ({ projects }) => {
   return (
     <Container>
       <ProjectList>
-        <p>hej</p>
+        {projects.map((data) => (
+          <Project key={data.id} project={data} />
+        ))}
+        {/* <div>
+          {projects.map((data) => (
+            <p>{data.attributes.Short_description}</p>
+          ))}
+        </div> */}
       </ProjectList>
     </Container>
   );
